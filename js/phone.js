@@ -19,12 +19,14 @@ function updatePhonePrice(currentPhoneNumber) {
 }
 
 
+
 document.getElementById('btn-phone-plus').addEventListener('click', function () {
     const currentPhoneNumber = updatePhoneNumber(true);
     updatePhonePrice(currentPhoneNumber);
-
+    calculateSubTotal();
 })
 document.getElementById('btn-phone-minus').addEventListener('click', function () {
     const currentPhoneNumber = updatePhoneNumber(false);
     updatePhonePrice(currentPhoneNumber);
+    calculateSubTotal();
 })
